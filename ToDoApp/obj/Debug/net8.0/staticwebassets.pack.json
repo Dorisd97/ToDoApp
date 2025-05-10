@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
+      "Id": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
+      "Id": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },
     {
-      "Id": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
+      "Id": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },
     {

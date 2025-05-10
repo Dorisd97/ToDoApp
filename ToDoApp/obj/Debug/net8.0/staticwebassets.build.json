@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7G9y56OrgQqogNYHGXlWb7rm/9EATMCk1rIvr6rnDQI=",
+  "Hash": "jOdrXCweQVX0xPY5OnrkNBVx8ZjnYXKZAJvkDTDaHIc=",
   "Source": "ToDoApp",
   "BasePath": "_content/ToDoApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ToDoApp\\wwwroot",
       "Source": "ToDoApp",
-      "ContentRoot": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\",
       "BasePath": "_content/ToDoApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
+      "Identity": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
       "SourceId": "ToDoApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\",
       "BasePath": "_content/ToDoApp",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
+      "Identity": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
       "SourceId": "ToDoApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\",
       "BasePath": "_content/ToDoApp",
       "RelativePath": "script#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\script.js"
     },
     {
-      "Identity": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
+      "Identity": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
       "SourceId": "ToDoApp",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\",
+      "ContentRoot": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\",
       "BasePath": "_content/ToDoApp",
       "RelativePath": "style#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -83,7 +83,7 @@
   "Endpoints": [
     {
       "Route": "index.g6w5kb4yl7.html",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -128,7 +128,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "Route": "script.js",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -202,7 +202,7 @@
     },
     {
       "Route": "script.v00na91ik2.js",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -247,7 +247,7 @@
     },
     {
       "Route": "style.1x0tchie58.css",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -292,7 +292,7 @@
     },
     {
       "Route": "style.css",
-      "AssetFile": "D:\\Projects\\Csharp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
+      "AssetFile": "D:\\Projects\\GitHub\\ToDoApp\\ToDoApp\\ToDoApp\\wwwroot\\style.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
