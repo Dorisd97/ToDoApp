@@ -1,29 +1,42 @@
-﻿# Ignore Visual Studio files
+﻿# Ignore Visual Studio and JetBrains IDE files
 .vs/
 .vscode/
 .idea/
-*.user
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
 
-# Ignore build results
+# Build results
 bin/
 obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+[Tt]emp/
+[Tt]estResults/
 
-# Ignore DLLs, EXEs, and other build-related files
+# Compiled binaries
 *.exe
 *.dll
 *.pdb
+*.cache
 *.appcache
-*.ts.runtime.json
 
-# Ignore static web assets build files
-staticwebassets.build.json
+# VS workspace temp files
+*.vsidx
+*.futdcache.v2
+*.dbmdl
+*.bak
+*.tlog
 
-# Ignore log files
-*.log
-
-# Ignore configuration files
+# Configuration files (optional, depending on your workflow)
 appsettings.json
 appsettings.Development.json
+
+# Static web assets
+staticwebassets.build.json
+
+# Logs
+*.log

@@ -1,5 +1,4 @@
-﻿/* Basic Styles for the To-Do app */
-body {
+﻿body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
@@ -8,7 +7,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -16,36 +15,122 @@ h1 {
     color: #007acc;
 }
 
-#todo-container {
-    margin-top: 20px;
+/* Form Styles */
+.form-container {
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
-#todo-list {
-    list-style-type: none;
-    padding: 0;
+#todo-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
 }
 
-    #todo-list li {
-        background-color: #e0e0e0;
-        margin: 5px 0;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-input, button {
+#todo-form input, #todo-form select, #todo-form textarea {
+    width: 100%;
     padding: 10px;
-    margin-top: 20px;
+    margin: 10px 0;
     font-size: 16px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#todo-form textarea {
+    height: 100px;
 }
 
 button {
     background-color: #007acc;
     color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
 }
 
     button:hover {
         background-color: #005f99;
+    }
+
+    /* Cancel button */
+    button[type="button"] {
+        background-color: #ccc;
+        margin-left: 10px;
+    }
+
+        button[type="button"]:hover {
+            background-color: #999;
+        }
+
+/* To-Do List Styling */
+#todo-list-container {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+#todo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+    .todo-card h3 {
+        margin: 0;
+    }
+
+    .todo-card .due-date {
+        font-size: 14px;
+        color: #888;
+    }
+
+    .todo-card .priority {
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: white;
+    }
+
+.priority-urgent {
+    background-color: #ff4d4d;
+}
+
+.priority-important {
+    background-color: #7a4eff;
+}
+
+.priority-normal {
+    background-color: #4caf50;
+}
+
+button.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button.delete-btn:hover {
+        background-color: #ff1a1a;
     }
