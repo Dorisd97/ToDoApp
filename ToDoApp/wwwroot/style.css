@@ -1,136 +1,94 @@
 ﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
     margin: 0;
-    padding: 20px;
-    text-align: center;
+    padding-top: 40px;
 }
 
 .container {
-    width: 60%;
-    margin: auto;
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #007acc;
-}
-
-/* Form Styles */
-.form-container {
-    display: none; /* Initially hidden */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #1c1e21;
+    margin-top: 0;
     margin-bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
 }
 
-#todo-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-align: left;
+.add-task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-#todo-form input, #todo-form select, #todo-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+#taskInput {
+    flex-grow: 1;
+    padding: 10px 15px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
 }
 
-#todo-form textarea {
-    height: 100px;
-}
-
-button {
-    background-color: #007acc;
-    color: white;
+#addTaskBtn {
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    margin: 10px;
+    transition: background-color 0.2s;
 }
 
-    button:hover {
-        background-color: #005f99;
+    #addTaskBtn:hover {
+        background-color: #166fe5;
     }
 
-    /* Cancel button */
-    button[type="button"] {
-        background-color: #ccc;
-        margin-left: 10px;
-    }
-
-        button[type="button"]:hover {
-            background-color: #999;
-        }
-
-/* To-Do List Styling */
-#todo-list-container {
-    margin-top: 20px;
-    display: none; /* Initially hidden */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#todo-list {
+.task-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid #dddfe2;
 }
 
-.todo-card {
-    background-color: #fff;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-    .todo-card h3 {
-        margin: 0;
+    .task-item:last-child {
+        border-bottom: none;
     }
 
-    .todo-card .due-date {
-        font-size: 14px;
-        color: #888;
+    .task-item span {
+        flex-grow: 1;
+        cursor: pointer;
     }
 
-    .todo-card .priority {
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        color: white;
-    }
-
-.priority-urgent {
-    background-color: #ff4d4d;
-}
-
-.priority-important {
-    background-color: #7a4eff;
-}
-
-.priority-normal {
-    background-color: #4caf50;
-}
-
-button.delete-btn {
-    background-color: #ff4d4d;
+.delete-btn {
+    background: #fa383e;
     color: white;
-    font-size: 12px;
+    border: none;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 12px;
 }
 
-    button.delete-btn:hover {
-        background-color: #ff1a1a;
+    .delete-btn:hover {
+        background: #e03036;
     }

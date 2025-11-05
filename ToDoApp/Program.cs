@@ -1,55 +1,56 @@
-using ToDoApp.Models;
 using ToDoApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddSingleton<ToDoService>();
-
-// Add Swagger for API documentation
+// 1. Add Swagger/OpenAPI services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Add CORS policy
+var devCorsPolicy = "DevCorsPolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: devCorsPolicy,
+                      policy =>
+                      {
+                          // Replace with your React app's URL
+                          policy.WithOrigins("http://localhost:5173")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
+});
+
+// Register the ToDoService for dependency injection
+builder.Services.AddSingleton<ToDoService>();
+
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
-// Enable middleware to serve Swagger UI (HTML, JS, CSS, etc.)
-app.UseSwagger();
-
-// Enable middleware to serve Swagger JSON endpoint
-app.UseSwaggerUI(c =>
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-    c.RoutePrefix = "swagger"; // Swagger UI at root URL
-});
-
-// Map API endpoints
-app.MapGet("/api/todos", (ToDoService service) =>
-    Results.Ok(service.GetAll()));
-
-app.MapGet("/api/todos/{id}", (int id, ToDoService service) =>
-    service.Get(id) is ToDoItem item ? Results.Ok(item) : Results.NotFound());
-
-app.MapPost("/api/todos", (ToDoItem item, ToDoService service) =>
+    // Use the specific policy in development
+    app.UseCors(devCorsPolicy);
+}
+else
 {
-    service.Add(item);
-    return Results.Created($"/api/todos/{item.Id}", item);
-});
-
-app.MapPut("/api/todos/{id}", (int id, ToDoItem input, ToDoService service) =>
-{
-    var existing = service.Get(id);
-    if (existing is null) return Results.NotFound();
-    input.Id = id;
-    service.Update(input);
-    return Results.NoContent();
-});
-
-app.MapDelete("/api/todos/{id}", (int id, ToDoService service) =>
-{
-    service.Delete(id);
-    return Results.NoContent();
-});
+    // In production, you might want a more restrictive policy
+    app.UseCors("AllowAll"); // Or whatever your production policy is
+}
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();  // This enables serving static files like HTML, CSS, and JS
+
+// Enable serving of static files from wwwroot
+app.UseStaticFiles();
+
+// Enable the CORS policy
+app.UseCors("AllowAll");
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.MapGet("/", () => Results.File("index.html", "text/html", "wwwroot"));
+
 app.Run();

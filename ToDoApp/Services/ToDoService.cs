@@ -4,25 +4,30 @@ namespace ToDoApp.Services
 {
     public class ToDoService
     {
-        private readonly List<ToDoItem> _items = new();
-        private int _nextId = 1;
+        // In-memory "database"
+        private static List<ToDoItem> _tasks = new List<ToDoItem>();
+        private static int _nextId = 1;
 
-        public IEnumerable<ToDoItem> GetAll() => _items;
+        public List<ToDoItem> GetAll() => _tasks;
 
-        public ToDoItem? Get(int id) => _items.FirstOrDefault(x => x.Id == id);
+        public ToDoItem? GetById(int id) => _tasks.FirstOrDefault(t => t.Id == id);
 
-        public void Add(ToDoItem item)
+        public ToDoItem Add(ToDoItem newItem)
         {
-            item.Id = _nextId++;
-            _items.Add(item);
+            newItem.Id = _nextId++;
+            _tasks.Add(newItem);
+            return newItem;
         }
 
-        public void Update(ToDoItem item)
+        public bool Delete(int id)
         {
-            var index = _items.FindIndex(x => x.Id == item.Id);
-            if (index != -1) _items[index] = item;
+            var task = GetById(id);
+            if (task == null)
+            {
+                return false;
+            }
+            _tasks.Remove(task);
+            return true;
         }
-
-        public void Delete(int id) => _items.RemoveAll(x => x.Id == id);
     }
 }
